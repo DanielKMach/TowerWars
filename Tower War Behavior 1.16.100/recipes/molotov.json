@@ -1,0 +1,16 @@
+{
+     "format_version": "1.12",
+     "minecraft:recipe_shapeless": {
+          "description": {
+               "identifier": "towerwar:molotov"
+          },
+
+          "tags": [ "crafting_table" ],
+          "ingredients": [
+               "minecraft:glass_bottle",
+               "minecraft:flint_and_steel",
+               "minecraft:leather"
+          ],
+          "result": "towerwar:molotov"
+     }
+}

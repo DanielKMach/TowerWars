@@ -1,0 +1,55 @@
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "towerwar:collecting_area",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false
+        },
+        "components": {
+            "minecraft:timer": {
+                "time": 0.5,
+                "time_down_event": {
+                    "event": "towerwar:die"
+                }
+            },
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "pivot": [ 0, 100, 0 ],
+                        "width": 0,
+                        "height": 0
+                    }
+                ]
+            },
+            "minecraft:nameable": {
+                "allow_name_tag_renaming": false
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "all",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
+            },
+            "minecraft:collision_box": {
+                "width": 0.0001,
+                "height": 0.0001
+            }
+        },
+        "events": {
+            "towerwar:die": {
+                "run_command": {
+                    "command": [
+                        "tp @s ~ 0 ~",
+                        "kill @s"
+                    ]
+                }
+            }
+        }
+    }
+}

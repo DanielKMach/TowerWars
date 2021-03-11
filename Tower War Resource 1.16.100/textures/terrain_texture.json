@@ -1,0 +1,9 @@
+{
+    "resource_pack_name": "tower",
+    "texture_data": {
+        "towerwar:game_sign": {
+            "textures": "textures/entity/signs/play_sign"
+        }
+    },
+    "texture_name": "atlas.terrain"
+}

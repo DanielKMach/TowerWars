@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "towerwar:collecting_area",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"geometry": {
+				"default": "geometry.collecting_area"
+			},
+			"render_controllers": [
+				"controller.render.dummy"
+			]
+		}
+	}
+}

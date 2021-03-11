@@ -1,0 +1,39 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bobomb.walk": {
+			"loop": true,
+			"animation_length": 1,
+			"bones": {
+				"rightLeg": {
+					"rotation": {
+						"0.0": [-35, 0, 0],
+						"0.52": [35, 0, 0],
+						"1.0": [-35, 0, 0]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [35, 0, 0],
+						"0.52": [-35, 0, 0],
+						"1.0": [35, 0, 0]
+					}
+				}
+			}
+		},
+		"animation.bobomb.swelling": {
+			"loop" : true,
+			"bones" : {
+				"head" : {
+					"scale" : [ "variable.swelling_scale1", "variable.swelling_scale2", "variable.swelling_scale1" ]
+				},
+				"leftLeg" : {
+					"scale" : [ "variable.swelling_scale1", "variable.swelling_scale2", "variable.swelling_scale1" ]
+				},
+				"rightLeg" : {
+					"scale" : [ "variable.swelling_scale1", "variable.swelling_scale2", "variable.swelling_scale1" ]
+				}
+			}
+		}
+	}
+}

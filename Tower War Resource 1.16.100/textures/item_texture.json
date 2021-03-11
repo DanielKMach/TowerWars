@@ -1,0 +1,34 @@
+{
+     "resource_pack_name": "tower",
+     "texture_name" : "atlas.items",
+     "texture_data": {
+          "towerwar:bomb": {
+               "textures": "textures/items/bomb"
+          },
+          "towerwar:creeper_egg": {
+               "textures": "textures/items/creeper_egg"
+          },
+          "towerwar:dynamite": {
+               "textures": "textures/items/dynamite"
+          },
+          "towerwar:missile": {
+               "textures": "textures/items/missile"
+          },
+          "towerwar:molotov": {
+               "textures": "textures/items/molotov"
+          },
+          "towerwar:nuclear": {
+               "textures": "textures/items/nuclear"
+          },
+
+          "towerwar:hotdog": {
+               "textures": "textures/items/hotdog"
+          },
+          "towerwar:speed_boots": {
+               "textures": "textures/items/speed_boots"
+          },
+          "towerwar:jump_boots": {
+               "textures": "textures/items/jump_boots"
+          }
+     }
+}

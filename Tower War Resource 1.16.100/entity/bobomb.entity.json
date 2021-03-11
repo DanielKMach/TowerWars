@@ -1,0 +1,50 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description":{
+			"identifier": "towerwar:bobomb",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"default": "textures/entity/bobomb/bobomb",
+				"game_trader": "textures/entity/bobomb/bobomb",
+				"kit_trader": "textures/entity/bobomb/kit_bobomb",
+				"exploding": "textures/entity/bobomb/bobomb_exploding"
+			},
+			"geometry": {
+				"default": "geometry.bobomb"
+			},
+			"animations": {
+				"walk": "animation.bobomb.walk",
+				"swelling": "animation.bobomb.swelling",
+				"look_at_target": "animation.humanoid.look_at_target.default.v1.0"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;",
+					"variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;",
+					"variable.swelling_scale2 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.1 + 1.0) / variable.wobble;",
+					"variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);",
+					"query.log(query.swell_amount);",
+					"query.log(query.trade_tier);"
+				],
+				"animate": [
+					{
+						"walk": "query.modified_move_speed"
+					},
+					"swelling",
+					"look_at_target"
+				]
+			},
+			"render_controllers": [
+				"controller.render.bobomb"
+			],
+			"enable_attachables": false,
+			"spawn_egg": {
+				"base_color": "#2C2020",
+				"overlay_color": "#7F7A7A"
+			}
+		}
+	}
+}

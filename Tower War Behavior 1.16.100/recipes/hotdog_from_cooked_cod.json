@@ -1,0 +1,15 @@
+{
+     "format_version": "1.12",
+     "minecraft:recipe_shapeless": {
+          "description": {
+               "identifier": "towerwar:hotdog_from_cooked_cod"
+          },
+
+          "tags": [ "crafting_table" ],
+          "ingredients": [
+               "minecraft:bread",
+               "minecraft:cooked_cod"
+          ],
+          "result": "towerwar:hotdog"
+     }
+}

@@ -1,0 +1,74 @@
+{
+    "format_version": "1.14.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "towerwar:dynamite",
+            "runtime_identifier": "minecraft:snowball",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+
+        "component_groups": {
+            "towerwar:exploding": {
+                "minecraft:explode": {
+                    "fuse_length": 0,
+                    "fuse_lit": true,
+                    "power": 1,
+                    "causes_fire": false,
+                    "destroy_affected_by_griefing": true 
+                }
+            }
+        },
+
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.4,
+                "height": 0.4
+            },
+            "minecraft:projectile": {
+
+                "on_hit": {
+                    "definition_event": {
+                        "affect_projectile": true,
+                        "eventTrigger": {
+                            "event": "towerwar:on_collision",
+                            "target": "self"
+                        }
+                    }
+                },
+                "power": 1.55,
+                "gravity": 0.03,
+                "anchor": 1,
+                "catch_fire": false
+            },
+            "minecraft:physics": { // 7 sand 0 replace sandstone 0
+            }
+        },
+        "events": {
+            "towerwar:on_collision": {
+                "run_command": {
+                    "command": [
+                        "execute @s[scores={PType=1}] ~ ~ ~ summon towerwar:collecting_area p1",
+                        "execute @s[scores={PType=2}] ~ ~ ~ summon towerwar:collecting_area p2",
+                        "execute @s[scores={PType=3}] ~ ~ ~ summon towerwar:collecting_area p3",
+                        "execute @s[scores={PType=4}] ~ ~ ~ summon towerwar:collecting_area p4"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "towerwar:exploding"
+                    ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "run_command": {
+                    "command": [
+                        "playsound random.bow @a ~ ~ ~ 1 0.45",
+                        "scoreboard players operation @s PType = @p PType"
+                    ]
+                }
+            }
+        }
+    }
+}

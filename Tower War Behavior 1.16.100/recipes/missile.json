@@ -1,0 +1,23 @@
+{
+     "format_version": "1.12",
+     "minecraft:recipe_shaped": {
+          "description": {
+               "identifier": "towerwar:missile"
+          },
+       
+          "tags": [ "crafting_table" ],
+          "pattern": [
+               "#X#",
+               "#Y#",
+               "#Z#"
+          ],
+          "key": {
+               "#": "minecraft:iron_ingot",
+               "X": "minecraft:redstone_block",
+               "Y": "minecraft:tnt",
+               "Z": "minecraft:blaze_powder"
+          },
+          "result": "towerwar:missile"
+     }
+}
+   

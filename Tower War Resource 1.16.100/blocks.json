@@ -1,0 +1,6 @@
+{
+    "towerwar:game_sign": {
+        "textures": "towerwar:game_sign",
+        "sound": "wood"
+    }
+}

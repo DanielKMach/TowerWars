@@ -1,0 +1,29 @@
+entity.towerwar:bobomb.name=Bob-omb
+item.spawn_egg.entity.towerwar:bobomb.name=Spawn Bob-omb
+
+entity.towerwar:bomb.name=Bomb
+entity.towerwar:creeper_egg.name=Creeper Egg
+entity.towerwar:dynamite.name=Dynamite
+entity.towerwar:missile.name=Missile
+entity.towerwar:molotov.name=Molotov Cocktail
+entity.towerwar:nuclear.name=Nuclear Bomb
+item.towerwar:bomb=Bomb
+item.towerwar:creeper_egg=Creeper Egg
+item.towerwar:dynamite=Dynamite
+item.towerwar:missile=Missile
+item.towerwar:molotov=Molotov Cocktail
+item.towerwar:nuclear=Nuclear Bomb
+
+sign.play===============%1§2§lPLAY%1%1§r==============
+sign.explore===============%1§1§lEXPLORE%1%1§r==============
+sign.spectate===============%1§4§lSPECTATE%1%1§r==============
+
+title.won=§2You won!
+title.lost=§cYou lost!
+title.redwon=Team §cred §rwon!
+title.bluewon=Team §3blue §rwon!
+actionbar.teamred=You are team §cred§r!
+actionbar.teamblue=You are team §3blue§r!
+actionbar.notenoughplayers=§cThere are not enough players
+
+scores.wins=Wins

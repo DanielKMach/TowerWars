@@ -1,0 +1,66 @@
+{
+    "format_version": "1.14.0",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "towerwar:molotov",
+            "runtime_identifier": "minecraft:snowball",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+
+        // Components
+        "components": {
+            "minecraft:collision_box": {
+                "width": 0.4,
+                "height": 0.4
+            },
+            "minecraft:projectile": {
+     
+                "on_hit": {
+                    "impact_damage": {
+                        "damage": 2,
+                        "catch_fire": true,
+                        "knockback": true,
+                        "destroy_on_hit": true
+                    },
+                    "definition_event": {
+                        "affect_projectile": true,
+                        "eventTrigger": {
+                            "event": "towerwar:on_collision",
+                            "target": "self"
+                        }
+                    },
+                    "particle_on_hit": {
+                        "particle_type": "iconcrack",
+                        "num_particles": 6,
+                        "on_entity_hit": true,
+                        "on_other_hit": true
+                    },
+                    "remove_on_hit": {}
+                },
+                "power": 1.45,
+                "gravity": 0.03,
+                "hit_sound": "glass",
+                "anchor": 1,
+                "catch_fire": true
+            },
+            "minecraft:physics": {
+            }
+        },
+
+        // Events
+        "events": {
+            "towerwar:on_collision": {
+                "run_command": {
+                    "command": "fill ~1 ~2 ~1 ~-1 ~-1 ~-1 fire 0 replace air"
+                }
+            },
+            "minecraft:entity_spawned": {
+                "run_command": {
+                    "command": "playsound random.bow @a ~ ~ ~ 1 0.45"
+                }
+            }
+        }
+    }
+}

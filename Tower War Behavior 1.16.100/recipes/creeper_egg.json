@@ -1,0 +1,21 @@
+{
+     "format_version": "1.12",
+     "minecraft:recipe_shaped": {
+          "description": {
+               "identifier": "towerwar:creeper_egg"
+          },
+       
+          "tags": [ "crafting_table" ],
+          "pattern": [
+               " # ",
+               "#X#",
+               " # "
+          ],
+          "key": {
+               "#": "minecraft:gunpowder",
+               "X": "minecraft:egg"
+          },
+          "result": "towerwar:creeper_egg"
+     }
+}
+   

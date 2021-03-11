@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.bobomb": {
+			"arrays": {
+				"textures": {
+					"Array.skins": [
+						"Texture.default",
+						"Texture.game_trader",
+						"Texture.kit_trader"
+					]
+				}
+			},
+			"geometry": "Geometry.default",
+			"materials": [{ "*": "Material.default" }],
+			"textures": [
+				"query.is_ignited ? Texture.exploding : Array.skins[query.variant]"
+			],
+			"overlay_color": {
+				"r": "((variable.flash == 0.0) || (query.swelling_dir < 0.0)) ? this : 1.0",
+				"g": "((variable.flash == 0.0) || (query.swelling_dir < 0.0)) ? this : 0.2",
+				"b": "((variable.flash == 0.0) || (query.swelling_dir < 0.0)) ? this : 0.2",
+				"a": "((variable.flash == 0.0) || (query.swelling_dir < 0.0)) ? this : 1.0"
+			}
+		}
+	}
+}

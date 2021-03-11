@@ -1,0 +1,71 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.thebeast",
+				"texture_width": 136,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5.5,
+				"visible_bounds_offset": [0, 2.25, 0]
+			},
+			"bones": [
+				{
+					"name": "waist",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 20, 0],
+					"cubes": [
+						{"origin": [-9, 20, -4], "size": [18, 24, 8], "uv": [34, 28]},
+						{"origin": [-9, 20, -4], "size": [18, 24, 8], "inflate": 0.5, "uv": [34, 60]}
+					]
+				},
+				{
+					"name": "rightarm",
+					"parent": "body",
+					"pivot": [9, 40, 0],
+					"cubes": [
+						{"origin": [9, 24, -4], "size": [9, 20, 8], "uv": [86, 32]}
+					]
+				},
+				{
+					"name": "leftarm",
+					"parent": "body",
+					"pivot": [-9, 40, 0],
+					"cubes": [
+						{"origin": [-18, 24, -4], "size": [9, 20, 8], "uv": [63, 100]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 44, 0],
+					"cubes": [
+						{"origin": [-11, 44, -6], "size": [22, 16, 12], "uv": [0, 0]},
+						{"origin": [-11, 44, -6], "size": [22, 16, 12], "inflate": 0.5, "uv": [68, 0]}
+					]
+				},
+				{
+					"name": "leftleg",
+					"parent": "waist",
+					"pivot": [-4.5, 20, 0],
+					"cubes": [
+						{"origin": [-9, 0, -4], "size": [9, 20, 8], "uv": [29, 100]}
+					]
+				},
+				{
+					"name": "rightleg",
+					"parent": "waist",
+					"pivot": [4.5, 20, 0],
+					"cubes": [
+						{"origin": [0, 0, -4], "size": [9, 20, 8], "uv": [0, 32]}
+					]
+				}
+			]
+		}
+	]
+}

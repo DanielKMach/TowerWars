@@ -1,0 +1,59 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {
+            "identifier": "towerwar:game_sign",
+            "properties": {
+                "towerwar:facing_direction": [0, 1, 2, 3]
+            }
+        },
+        "components": {
+            "minecraft:on_player_placing": {
+                "event": "towerwar:set_rotation",
+                "target": "self"
+            },
+            "minecraft:geometry": "geometry.game_sign",
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "towerwar:game_sign",
+                    "render_method": "blend"
+                }
+            }
+        },
+
+        "events": {
+            "towerwar:set_rotation": {
+                "set_block_property": {
+                    "towerwar:facing_direction": "query.cardinal_facing_2d - 2"
+                }
+            }
+        },
+
+        "permutations": [
+	  		{
+				"condition": "query.block_property('towerwar:facing_direction') == 0", // North
+				"components": {
+                    "minecraft:rotation": [0, 180, 0]
+                }
+	  		},
+	  		{
+				"condition": "query.block_property('towerwar:facing_direction') == 1", // South
+				"components": {
+                    "minecraft:rotation": [0, 0, 0]
+                }
+	  		},
+	  		{
+				"condition": "query.block_property('towerwar:facing_direction') == 2", // West
+				"components": {
+                    "minecraft:rotation": [0, 270, 0]
+                }
+	  		},
+            {
+				"condition": "query.block_property('towerwar:facing_direction') == 3", // East
+				"components": {
+                    "minecraft:rotation": [0, 90, 0]
+                }
+            }
+        ]
+    }
+}
