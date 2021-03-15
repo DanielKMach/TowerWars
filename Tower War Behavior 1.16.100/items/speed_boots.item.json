@@ -16,7 +16,7 @@
                "minecraft:stacked_by_data": true,
                
                "minecraft:armor": {
-                    "protection": 2
+                    "protection": 0
                },
                "minecraft:wearable": {
                     "dispensable": true,

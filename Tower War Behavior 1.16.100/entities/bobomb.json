@@ -63,6 +63,7 @@
 							},
 							"event": "towerwar:explode"
 						},
+						//"damage_modifier": -999,
 						"deals_damage": false
 					}
 					
@@ -103,7 +104,7 @@
 
 			"towerwar:exploding": {
 				"minecraft:explode": {
-					"fuse_length": 2,
+					"fuse_length": 1.5,
 					"fuse_lit": true,
 					"power": 6,
 					"causes_fire": false,
@@ -181,6 +182,7 @@
 				}
 			},
 
+
 			"towerwar:explode": {
 				"remove": {
 					"component_groups": [
@@ -191,6 +193,9 @@
 					"component_groups": [
 						"towerwar:exploding"
 					]
+				},
+				"run_command": {
+					"command": "playsound random.fuse @a ~ ~ ~ 1 0.5"
 				}
 			}
 		}

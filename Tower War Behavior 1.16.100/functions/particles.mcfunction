@@ -1,2 +1,2 @@
-execute @e[type=towerwar:missile] ~ ~ ~ /particle minecraft:basic_flame_particle ~ ~ ~
-execute @e[type=towerwar:missile] ~ ~ ~ /particle minecraft:basic_smoke_particle ~ ~ ~
+execute @e[type=towerwar:missile] ~ ~ ~ /particle towerwar:rocket ~ ~ ~
+execute @e[type=towerwar:flammable_missile] ~ ~ ~ /particle towerwar:rocket ~ ~ ~

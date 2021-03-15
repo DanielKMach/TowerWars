@@ -17,6 +17,9 @@
           "towerwar:molotov": {
                "textures": "textures/items/molotov"
           },
+          "towerwar:nausea": {
+               "textures": "textures/items/nausea"
+          },
           "towerwar:nuclear": {
                "textures": "textures/items/nuclear"
           },

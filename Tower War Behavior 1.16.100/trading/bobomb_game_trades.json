@@ -38,6 +38,18 @@
                     "max_uses": 256,
                     "reward_exp": false
                 },
+                {
+                    "wants": [{
+                        "item": "minecraft:emerald",
+                        "quantity": 9
+                    }],
+                    "gives": [{
+                        "item": "towerwar:nausea",
+                        "quantity": 1
+                    }],
+                    "max_uses": 256,
+                    "reward_exp": false
+                },
 				{
                     "wants": [{
                         "item": "minecraft:emerald",
@@ -57,6 +69,18 @@
                     }],
                     "gives": [{
                         "item": "towerwar:missile",
+                        "quantity": 1
+                    }],
+                    "max_uses": 256,
+                    "reward_exp": false
+                },
+                {
+                    "wants": [{
+                        "item": "minecraft:emerald",
+                        "quantity": 30
+                    }],
+                    "gives": [{
+                        "item": "towerwar:flammable_missile",
                         "quantity": 1
                     }],
                     "max_uses": 256,

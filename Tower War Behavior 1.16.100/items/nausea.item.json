@@ -2,27 +2,26 @@
 	"format_version": "1.16.100",
 	"minecraft:item": {
 		"description": {
-               "identifier": "towerwar:dynamite",
+               "identifier": "towerwar:nausea",
                "category" : "items"
 		},
 		"components": {
                "minecraft:icon": {
-                    "texture": "towerwar:dynamite"
+                    "texture": "towerwar:nausea"
                },
                "minecraft:creative_category": {
                     "parent": "itemGroup.name.items"
                },
-               "minecraft:hand_equipped": true,
                "minecraft:max_stack_size": 64,
 			"minecraft:stacked_by_data": true,
 			"minecraft:projectile": {
                     "minimum_critical_power": 3,
-                    "projectile_entity": "towerwar:dynamite"
+                    "projectile_entity": "towerwar:nausea"
                },
                "minecraft:throwable": {
                     "do_swing_animation": true,
                     "launch_power_scale": 2.0
                }
-		}
+          }
 	}
 }

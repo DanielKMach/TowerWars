@@ -4,7 +4,7 @@
         "description": "Throw bombs at your friends!",
         "name": "Tower Wars",
         "uuid": "bcae68b8-6fb6-4d54-b4dd-179a28d2b4a1",
-        "version": [ 0, 0, 20 ],
+        "version": [ 0, 0, 24 ],
         "min_engine_version": [ 1, 16, 100 ]
     },
     "modules": [
@@ -12,7 +12,7 @@
             "description": "Throw bombs at your friends!",
             "type": "data",
             "uuid": "31213d7f-75eb-40c4-87b4-3b0b2ad3034b",
-            "version": [ 0, 0, 20 ]
+            "version": [ 0, 0, 24 ]
         }
     ]
 }

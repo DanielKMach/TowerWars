@@ -1,0 +1,24 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "towerwar:flammable_missile",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "towerwar:missile"
+            },
+            "minecraft:projectile": {
+                "projectile_entity": "towerwar:flammable_missile"
+            },
+            "minecraft:max_stack_size": 16,
+            "minecraft:throwable": {
+                "do_swing_animation": true
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.items"
+            }
+        }
+    }
+}

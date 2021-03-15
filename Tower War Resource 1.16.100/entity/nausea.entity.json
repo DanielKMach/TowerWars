@@ -1,0 +1,26 @@
+{
+     "format_version": "1.16.100",
+     "minecraft:client_entity": {
+       "description": {
+         "identifier": "towerwar:nausea",
+         "materials": {
+           "default": "snowball"
+         },
+         "textures": {
+           "default": "textures/items/nausea"
+         },
+         "geometry": {
+           "default": "geometry.item_sprite"
+         },
+         "render_controllers": [ "controller.render.item_sprite" ],
+         "animations": {
+           "flying": "animation.actor.billboard"
+         },
+         "scripts": {
+           "animate": [
+             "flying"
+           ]
+         }
+       }
+     }
+   } 

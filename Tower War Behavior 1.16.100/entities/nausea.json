@@ -2,28 +2,21 @@
     "format_version": "1.14.0",
     "minecraft:entity": {
         "description": {
-            "identifier": "towerwar:molotov",
+            "identifier": "towerwar:nausea",
             "runtime_identifier": "minecraft:snowball",
             "is_spawnable": false,
             "is_summonable": true,
             "is_experimental": false
         },
-
-        // Components
+ 
         "components": {
             "minecraft:collision_box": {
-                "width": 0.4,
-                "height": 0.4
+                "width": 0.5,
+                "height": 0.5
             },
             "minecraft:projectile": {
      
                 "on_hit": {
-                    "impact_damage": {
-                        "damage": 2,
-                        "catch_fire": true,
-                        "knockback": true,
-                        "destroy_on_hit": true
-                    },
                     "definition_event": {
                         "affect_projectile": true,
                         "eventTrigger": {
@@ -39,31 +32,32 @@
                     },
                     "remove_on_hit": {}
                 },
-                "power": 1.45,
+                "power": 1.4,
                 "gravity": 0.03,
-                "anchor": 1,
-                "catch_fire": true
+                "catch_fire": false,
+                "hit_sound": "soul_sand"
             },
             "minecraft:physics": {
             }
         },
-
-        // Events
         "events": {
             "towerwar:on_collision": {
                 "run_command": {
                     "command": [
-                        "fill ~1 ~2 ~1 ~-1 ~-1 ~-1 fire 0 replace air",
-                        "playsound random.glass @a ~ ~ ~",
-                        "playsound mob.ghast.fireball @a ~ ~ ~ 1 0.8"
+                        "effect @e[r=7] nausea 25 255",
+                        "playsound random.fizz @a ~ ~ ~ 0.8 0.5"
                     ]
                 }
             },
             "minecraft:entity_spawned": {
                 "run_command": {
-                    "command": "playsound random.bow @a ~ ~ ~ 1 0.45"
+                    "command": [
+                        "playsound random.bow @a ~ ~ ~ 1 0.45",
+                        "scoreboard players operation @s PType = @p PType"
+                    ]
                 }
             }
         }
     }
 }
+ 
