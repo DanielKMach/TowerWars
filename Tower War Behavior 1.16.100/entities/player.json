@@ -50,18 +50,18 @@
           "looping": true,
           "time": 0,
           "time_down_event": {
-            "event": "towerwar:on_tick",
+            "event": "towerwar:on_tick", // Todo tick é chamado o evento "towerwar:on_tick"
             "target": "self"
           }
         },
-        "minecraft:damage_sensor": {
-          "triggers": {
-            "on_damage": {
-              "filters": { "test": "is_family", "subject": "other", "value": "player" }
-            },
-            "deals_damage": false
-          }
-        },
+        //"minecraft:damage_sensor": {
+        //  "triggers": {
+        //    "on_damage": {
+        //      "filters": { "test": "is_family", "subject": "other", "value": "player" }
+        //    },
+        //    "deals_damage": false
+        //  }
+        //},
 
         "minecraft:experience_reward": {
           "on_death": "Math.Min(query.player_level * 7, 100)"
@@ -178,15 +178,17 @@
         "towerwar:on_tick": {
           "sequence": [
             {
+              // Detecta se o jogador tem um equipamento no pé e tem o ID "towerwar:speed_boots"
               "filters": {"test": "has_equipment", "domain": "feet", "value": "towerwar:speed_boots"},
               "run_command": {
-                "command": "effect @s speed 1 1 true"
+                "command": "effect @s speed 1 1 true" // Aplica Velocidade II no jogador
               }
             },
             {
+              // Detecta se o jogador tem um equipamento no pé e tem o ID "towerwar:jump_boots"
               "filters": {"test": "has_equipment", "domain": "feet", "value": "towerwar:jump_boots"},
               "run_command": {
-                "command": "effect @s jump_boost 1 1 true"
+                "command": "effect @s jump_boost 1 1 true" // Aplica Pulo Turbinado II (que nome bosta) no jogador
               }
             }
           ]

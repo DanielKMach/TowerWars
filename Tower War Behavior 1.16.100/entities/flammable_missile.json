@@ -43,17 +43,17 @@
         "events": {
             "towerwar:on_collision": {
                 "run_command": {
-                    "command": [
-                        "execute @s[scores={PType=1}] ~ ~ ~ summon towerwar:collecting_area p1",
-                        "execute @s[scores={PType=2}] ~ ~ ~ summon towerwar:collecting_area p2",
-                        "execute @s[scores={PType=3}] ~ ~ ~ summon towerwar:collecting_area p3",
-                        "execute @s[scores={PType=4}] ~ ~ ~ summon towerwar:collecting_area p4"
-                    ]
+                    "command": "function summon_collecting_area"
                 },
                 "add": {
                     "component_groups": [
                         "towerwar:exploding"
                     ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "run_command": {
+                    "command": "function get_player_num"
                 }
             }
         }

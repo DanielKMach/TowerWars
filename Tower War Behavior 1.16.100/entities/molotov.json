@@ -9,7 +9,7 @@
             "is_experimental": false
         },
 
-        // Components
+        // Componentes
         "components": {
             "minecraft:collision_box": {
                 "width": 0.4,
@@ -48,14 +48,14 @@
             }
         },
 
-        // Events
+        // Eventos
         "events": {
             "towerwar:on_collision": {
                 "run_command": {
                     "command": [
-                        "fill ~1 ~2 ~1 ~-1 ~-1 ~-1 fire 0 replace air",
-                        "playsound random.glass @a ~ ~ ~",
-                        "playsound mob.ghast.fireball @a ~ ~ ~ 1 0.8"
+                        "fill ~1 ~2 ~1 ~-1 ~-1 ~-1 fire 0 replace air", // Espelha o fogo
+                        "playsound random.glass @a ~ ~ ~", // Toca o som de vidro quebrando
+                        "playsound mob.ghast.fireball @a ~ ~ ~ 1 0.8" // toca o som de fogo espalhando
                     ]
                 }
             },

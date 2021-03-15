@@ -9,18 +9,22 @@
             "is_experimental": false
         },
  
+        // Grupo de componentes
         "component_groups": {
+
+            // Componente de explosão
             "towerwar:exploding": {
                 "minecraft:explode": {
                     "fuse_length": 0,
                     "fuse_lit": true,
-                    "power": 2,
-                    "causes_fire": false,
+                    "power": 2, // A força da explosão
+                    "causes_fire": false, // Se explosão causa fogo no chão
                     "destroy_affected_by_griefing": true
                 }
             }
         },
  
+        // Componentes
         "components": {
             "minecraft:collision_box": {
                 "width": 0.5,
@@ -32,28 +36,28 @@
                     "definition_event": {
                         "affect_projectile": true,
                         "eventTrigger": {
-                            "event": "towerwar:on_collision",
+                            "event": "towerwar:on_collision", // Quando o projétil encostar em alguma coisa chama o evento 'towerwar:on_collision'
                             "target": "self"
                         }
                     }
                 },
-                "power": 1.3,
-                "gravity": 0.03,
-                "catch_fire": false
+                "power": 1.3, // A força que o projétil vai ser lançado
+                "gravity": 0.03, // A Grávidade do projétil (Não precisa mexer nisso)
+                "catch_fire": false // Se o projétil bota fogo em quem encosta
             },
-            "minecraft:physics": {
-            }
+            "minecraft:physics": {} // Necessário para que o projétil tenha colisão
         },
+
+        // Eventos
         "events": {
             "towerwar:on_collision": {
+                // Dependendo do 'Número do jogador' spawna uma area de coleta que derá esmeraldas para esse jogador
+                // (Provavelmente transformarei em uma função depois)
                 "run_command": {
-                    "command": [
-                        "execute @s[scores={PType=1}] ~ ~ ~ summon towerwar:collecting_area p1",
-                        "execute @s[scores={PType=2}] ~ ~ ~ summon towerwar:collecting_area p2",
-                        "execute @s[scores={PType=3}] ~ ~ ~ summon towerwar:collecting_area p3",
-                        "execute @s[scores={PType=4}] ~ ~ ~ summon towerwar:collecting_area p4"
-                    ]
+                    "command": "function summon_collecting_area"
                 },
+                
+                // Adiciona um grupo de componentes 'towerwar:exploding' que faz o projétil explodir
                 "add": {
                     "component_groups": [
                         "towerwar:exploding"
@@ -64,8 +68,8 @@
             "minecraft:entity_spawned": {
                 "run_command": {
                     "command": [
-                        "playsound random.bow @a ~ ~ ~ 1 0.45",
-                        "scoreboard players operation @s PType = @p PType"
+                        "playsound random.bow @a ~ ~ ~ 1 0.4",
+                        "function get_player_num" // Coleta o 'Número do jogador' e armazena no próprio scoreboard
                     ]
                 }
             }
