@@ -12,7 +12,7 @@
                         "quantity": 1
                     }],
                     "max_uses": 1,
-                    "reward_exp": false
+                    "reward_exp": true
                 },
                 {
                     "wants": [{
@@ -24,7 +24,7 @@
                         "quantity": 1
                     }],
                     "max_uses": 1,
-                    "reward_exp": false
+                    "reward_exp": true
                 },
                 {
                     "wants": [{
@@ -36,7 +36,7 @@
                         "quantity": 1
                     }],
                     "max_uses": 1,
-                    "reward_exp": false
+                    "reward_exp": true
                 },
                 {
                     "wants": [{
@@ -48,7 +48,7 @@
                         "quantity": 1
                     }],
                     "max_uses": 1,
-                    "reward_exp": false
+                    "reward_exp": true
                 }
             ]
         }

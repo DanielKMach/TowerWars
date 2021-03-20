@@ -1,1 +1,1 @@
-scoreboard players operation @s PType = @p PType
+scoreboard players operation @s PNum = @p PNum

@@ -27,6 +27,14 @@
 			},
 
 			"towerwar:kit_trader": {
+				"minecraft:timer": {
+					"looping": true,
+					"time": 0,
+					"time_down_event": {
+					  	"event": "towerwar:on_tick", // Todo tick é chamado o evento "towerwar:on_tick"
+					  	"target": "self"
+					}
+				},
 				"minecraft:trade_table": {
 					"display_name": "entity.towerwar:bobomb.name",
 					"new_screen": true,
@@ -216,6 +224,16 @@
 						}
 					}
 				]
+			},
+			"towerwar:on_tick": {
+				"run_command": {
+					"command": [
+						"execute @s[scores={PNum=1}] ~ ~ ~ execute @p[scores={PNum=1},lm=1] ~ ~ ~ event entity @e[type=towerwar:bobomb,scores={PNum=1}] towerwar:kill_kit",
+						"execute @s[scores={PNum=2}] ~ ~ ~ execute @p[scores={PNum=2},lm=1] ~ ~ ~ event entity @e[type=towerwar:bobomb,scores={PNum=2}] towerwar:kill_kit",
+						"execute @s[scores={PNum=3}] ~ ~ ~ execute @p[scores={PNum=3},lm=1] ~ ~ ~ event entity @e[type=towerwar:bobomb,scores={PNum=3}] towerwar:kill_kit",
+						"execute @s[scores={PNum=4}] ~ ~ ~ execute @p[scores={PNum=4},lm=1] ~ ~ ~ event entity @e[type=towerwar:bobomb,scores={PNum=4}] towerwar:kill_kit"
+					]
+				}
 			}
 		}
 	}
